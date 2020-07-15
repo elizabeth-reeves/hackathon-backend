@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     numMeals: DataTypes.INTEGER,
     numCoffees: DataTypes.INTEGER,
     numDesserts: DataTypes.INTEGER,
-    cost: DataTypes.Double
+    cost: DataTypes.DOUBLE
   }, {});
   Order.associate = function(models) {
     Order.belongsTo(models.Restaurant, {
