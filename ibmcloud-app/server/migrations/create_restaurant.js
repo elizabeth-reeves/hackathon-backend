@@ -16,9 +16,13 @@ module.exports = {
       hasDessert: Sequelize.BOOLEAN,
       dessertPrice: Sequelize.DOUBLE,
       address: Sequelize.STRING,
-      zipcode: Sequelize.INTEGER,
+      zipcode: Sequelize.STRING,
       cuisine: Sequelize.STRING,
       restaurantImage: Sequelize.STRING,
+      foodAmount: Sequelize.INTEGER,
+      coffeeAmount: Sequelize.INTEGER,
+      dessertAmount: Sequelize.INTEGER,
+      donateTo: Sequelize.STRING,
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

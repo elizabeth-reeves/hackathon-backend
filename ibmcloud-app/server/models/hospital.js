@@ -3,7 +3,7 @@ module.exports = (sequelize, DataTypes) => {
   var Hospital = sequelize.define('Hospital', {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
-    zipcode: DataTypes.INTEGER,
+    zipcode: DataTypes.STRING,
     hospitalId: {
       type: DataTypes.INTEGER,
       primaryKey: true

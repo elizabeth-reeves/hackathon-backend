@@ -1,0 +1,20 @@
+version: "3"
+services:
+    pg:
+        image: "postgres:12"
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_DB=intern-dev
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=password
+    node_backend:
+        container_name: "node_backend"
+        build: ./ibmcloud-app/
+        ports:
+            - "3010:3010"
+        links:
+            - pg
+        depends_on: 
+            - pg
+        command: ["./wait-for.sh", "pg:5432", "--", "npm", "start"]

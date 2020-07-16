@@ -3,15 +3,19 @@ module.exports = (sequelize, DataTypes) => {
   var Restaurant = sequelize.define('Restaurant', {
     name: DataTypes.STRING,
     hasFood: DataTypes.BOOLEAN,
-    foodPrice: DataTypes.DOUBLE,
+    foodPrice: DataTypes.REAL,
     hasCoffee: DataTypes.BOOLEAN,
-    coffeePrice: DataTypes.DOUBLE,
+    coffeePrice: DataTypes.REAL,
     hasDessert: DataTypes.BOOLEAN,
-    dessertPrice: DataTypes.DOUBLE,
+    dessertPrice: DataTypes.REAL,
     address: DataTypes.STRING,
-    zipcode: DataTypes.INTEGER,
+    zipcode: DataTypes.STRING,
     cuisine: DataTypes.STRING,
     restaurantImage: DataTypes.STRING,
+    foodAmount: DataTypes.INTEGER,
+    coffeeAmount: DataTypes.INTEGER,
+    dessertAmount: DataTypes.INTEGER,
+    donateTo: DataTypes.STRING,
     restaurantId: {
       type: DataTypes.INTEGER,
       primaryKey: true

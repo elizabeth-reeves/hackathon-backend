@@ -22,4 +22,8 @@ module.exports = (app) => {
   app.post('/api/restaurants/:restaurantId/orders', (req, res) => {
     ordersController.create(req, res)
   });
+
+  app.put('/api/restaurants/:restaurantId', (req, res) => {
+    restaurantsController.update(req, res)
+  })
 };
